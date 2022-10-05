@@ -40,7 +40,8 @@ $(function() {
                     return layer.msg('注册失败')
                 }
                 layer.msg('注册成功')
-                location.href = '/index.html'
+                 // 模拟人的点击行为，跳转到登录页面
+                $('#link_login').click()
             }
         })
     })
@@ -54,12 +55,13 @@ $(function() {
             url: '/api/login',
             data: $(this).serialize(),
             success: function(res) {
-                if(res !== 0) {
-                    return layer.msg('注册失败')
+                if(res.status !== 0) {
+                    return layer.msg('登录失败')
                 }
                 layer.msg('登录成功')
                 // 将token存入到本地
                 localStorage.setItem('token', res.token)
+           
             }
 
         })
