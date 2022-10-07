@@ -15,7 +15,7 @@
     <div class="layui-layout layui-layout-admin">
       <div class="layui-header">
         <div class="layui-logo">
-          <img src="/assets/images/logo.png" alt="" />
+          <img src="/assets/images/logo.jpg" alt="" style="width: 150px;overflow: hidden;" />
         </div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-right">
@@ -25,9 +25,9 @@
               个人中心
             </a>
             <dl class="layui-nav-child">
-              <dd><a href="">基本资料</a></dd>
-              <dd><a href="">更换头像</a></dd>
-              <dd><a href="">重置密码</a></dd>
+              <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+              <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+              <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item"><a href="javascript:;" id="btnLogout"><span class="iconfont icon-tuichu"></span>退出</a></li>
@@ -56,17 +56,17 @@
                 零食管理</a>
               <dl class="layui-nav-child">
                 <dd>
-                  <a href="javascript:;">
+                  <a href="/snack/snack_cate.html" target="fm">
                     <i class="layui-icon layui-icon-app"></i>
                     零食类别</a>
                 </dd>
                 <dd>
-                  <a href="javascript:;">
+                  <a href="/snack/snack_list.html" target="fm">
                     <i class="layui-icon layui-icon-app"></i>
                     零食列表</a>
                 </dd>
                 <dd>
-                  <a href="javascript:;">
+                  <a href="/snack/snack_pub.html" target="fm">
                     <i class="layui-icon layui-icon-app"></i>
                     新增零食</a>
                 </dd>

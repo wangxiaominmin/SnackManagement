@@ -35,9 +35,8 @@ $(function() {
             url: '/api/reguser',
             data: $(this).serialize(),
             success: function(res) {
-                console.log(res);
                 if(res.status!==0) {
-                    return layer.msg('注册失败')
+                    return layer.msg(res.message)
                 }
                 layer.msg('注册成功')
                  // 模拟人的点击行为，跳转到登录页面
@@ -56,7 +55,7 @@ $(function() {
             data: $(this).serialize(),
             success: function(res) {
                 if(res.status !== 0) {
-                    return layer.msg('登录失败')
+                    return layer.msg(res.message+'用户名或密码错误！')
                 }
                 layer.msg('登录成功')
                 // 将token存入到本地
